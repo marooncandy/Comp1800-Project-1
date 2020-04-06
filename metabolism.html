@@ -39,7 +39,7 @@
             <div class="navbar-nav">
                 <a href="main.html" class="nav-item nav-link active">Home</a>
                 <a href="#" class="nav-item nav-link">Campus food</a>
-                
+
                 <a href="#" class="nav-item nav-link">Weight Trend</a>
             </div>
             <div class="navbar-nav ml-auto">
@@ -61,7 +61,7 @@
       </p>
       <p>
          Gender: 
-       <input type="text" id="gender">
+       <input type="text" id="gender" placeholder="female / male">
         <!--
         <select id="select">
             <option value="">Choose...</option>
@@ -82,10 +82,11 @@
       </p>
       <p>
         Activity Level: 
-        <input type="text" id="act">
+        <input type="text" id="act" placeholder="sedentary/somewhat active/active/very active">
       </p>
       <p>
         <input type="submit" value="Calculate" onclick= calculateBMR()>
+        <input type="reset" value="Clear">
       </p>
       Total calories/day to maintain your current weight is: 
       <h1 id="totalcalories"></h1>
@@ -96,6 +97,7 @@
     </div>
     <div class="footer fixed-bottom center">
         <input type="button" value="BACK" id="backbutton" onclick="window.location='main.html'">
+
         
     </div>
 
