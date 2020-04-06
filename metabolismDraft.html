@@ -47,7 +47,7 @@
             </div>
         </div>
     </nav>
-<!-----------------------------METABOLISM INPUT FORM STARTS HERE-------------------------------------->
+
     <div id="maindiv" class="container py-3">
         <p id="title">Calculate BMR Rate (Estimated):</p>
         <br />
@@ -72,30 +72,99 @@
       <p>
          Height:
         <input type="text" id ="height" placeholder="Enter cm">
-        cm
       </p>
       <p>
         Weight:
         <input type="text" id="weight" placeholder="Enter kg">
-        kg
       </p>
       <p>
         Activity Level: 
         <input type="text" id="act">
+        <!--retrieving balue from select menu not working :(
+        <select id="select">
+            <option value="">Choose...</option>
+            <option value="sedentary" id="sed">Sedentary</option>
+            <option value="somewhatactive" id="swhat">Somewhat Active</option>
+            <option value="active" id="active">Active</option>
+            <option value="veryactive" id="vactive">Very Active</option>
+        </select>
+        -->
       </p>
       <p>
-        <input type="submit" value="Calculate" onclick= calculateBMR()>
+        <input type="submit" value="Calculate">
       </p>
-      Total calories/day to maintain your current weight is: 
-      <h1 id="totalcalories"></h1>
     </form>
 
-    <!----------------------------------------------------------------------->
-    <!--BACK BUTTON-->
+    <!--
+        <form id="myform2" action="">
+        <input type="text" id="age">
+        <input type="submit">
+    </form>
+
+    -->
     </div>
     <div class="footer fixed-bottom center">
         <input type="button" value="BACK" id="backbutton">
     </div>
+        <!--
+        <form id="myage">
+            <label for="input">Age :</label>
+            <input type="text" id="input" placeholder="Enter Age" />
+            years old
+        </form>
+        <form id="mygender">
+            Gender :
+            <label>
+                <input type="radio" name="optionsRadios" id="male" value="option1" checked="" />
+                Male
+            </label>
+            <label>
+                <input type="radio" name="optionsRadios" id="female" value="option2" />
+                Female
+            </label>
+        </form>
+        <form action="" id="myheight">
+            <label for="input">Height :</label>
+            <input type="text" id="input" placeholder="Enter cm / ft" />
+            <label>
+                <input type="radio" name="height" id="cm" value="option1" checked="" />
+                cm
+            </label>
+            <label>
+                <input type="radio" name="height" id="ft" value="option2" />
+                ft
+            </label>
+        </form>
+
+        <form action="" id="myform">
+            <label for="input">Weight :</label>
+            <input type="text" id="weight" placeholder="Enter kg / lbs" />
+
+            <label>
+                <input type="radio" name="weight" id="kg" value="option1" checked="" />
+                kg
+            </label>
+            <label>
+                <input type="radio" name="weight" id="lbs" value="option2" />
+                lbs
+            </label>
+        </form>
+        <form>
+            <label for="select">Activity Level</label>
+            <select id="select">
+                <option value="">Choose...</option>
+                <option value="" id="sedent">Sedentary</option>
+                <option value="" id="swhat">Somewhat Active</option>
+                <option value="" id="active">Active</option>
+                <option value="" id="vactive">Very Active</option>
+            </select>
+        </form>
+        <br />
+        <input type="submit" value="Calculate" id="cal">
+    -->
+    
+
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -120,7 +189,6 @@
     <!----------------------------------------------->
     <script src="firebase_api_team27.js"></script>
     <script src="metabolism.js"></script>
-
 
 </body>
 </html>                            
