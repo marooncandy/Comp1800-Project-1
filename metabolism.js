@@ -13,7 +13,7 @@ function saveUserData() {
         console.log(gen);
         console.log(act);
         firebase.auth().onAuthStateChanged(function (user) {
-            db.collection("users").doc("c82KHU8AspvFaGZou68v").update({
+            db.collection("users/").doc(user.uid).update({
                 "age" : age,
                 "height" : ht,
                 "weight": wt,
@@ -31,7 +31,7 @@ let bmr = 0;
 
 function calculateBMR(){
     firebase.auth().onAuthStateChanged(function (user){
-        db.collection("users").doc("c82KHU8AspvFaGZou68v")
+        db.collection("users/").doc(user.uid)
         .onSnapshot(function (d) {
             console.log("Current data: ", d.data());
             if (d.get("gender") == "male"){
