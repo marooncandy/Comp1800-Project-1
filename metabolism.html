@@ -61,14 +61,13 @@
       </p>
       <p>
          Gender: 
-       <input type="text" id="gender" placeholder="female / male">
-        <!--
-        <select id="select">
+         <input type="text" id="gender" placeholder="female / male">
+       <!--<select id="choosegender">
             <option value="">Choose...</option>
-            <option value="male" id="male">Male</option>
-            <option value="female" id="female">Female</option>
-        </select>
-        -->
+            <option value="1" id="male">Male</option>
+            <option value="2" id="female">Female</option>
+        </select> -->
+        
       </p>
       <p>
          Height:
@@ -88,9 +87,30 @@
         <input type="submit" value="Calculate" onclick= calculateBMR()>
         <input type="reset" value="Clear">
       </p>
-      Total calories/day to maintain your current weight is: 
-      <h1 id="totalcalories"></h1>
+     
+      <!-- <h2 id="totalcalories"></h2>
+      <h2 id="suggestedcal"></h2>-->
     </form>
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Maintain Weight</th>
+            <th>Suggested Weight loss (0.5kg/week)</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="totalcalories"></td>
+            <td id="suggestedcal"></td>
+          </tr>
+        </tbody>
+      </table>
+<!----------------------testing----------------<p id="demo1"></p>--------------------------------->
+
+
+
 
     <!----------------------------------------------------------------------->
     <!--BACK BUTTON-->

@@ -5,19 +5,19 @@ function saveUserData() {
         let age = document.getElementById("age").value;
         let ht = document.getElementById("height").value;
         let wt = document.getElementById("weight").value;
-        let gen = document.getElementById("gender").value;
+        //let gen = document.getElementById("gender").value;
         let act = document.getElementById("act").value;
         console.log(age);
         console.log(ht);
         console.log(wt);
-        console.log(gen);
+        //console.log(gen);
         console.log(act);
         firebase.auth().onAuthStateChanged(function (user) {
             db.collection("users/").doc(user.uid).update({
                 "age" : age,
                 "height" : ht,
                 "weight": wt,
-                "gender": gen,
+                //"gender": gen,
                 "activitylevel": act
             });
         })
@@ -36,14 +36,10 @@ function calculateBMR(){
             console.log("Current data: ", d.data());
             if (d.get("gender") == "male"){
                 bmr = 10 * d.get("weight") + 6.25 * d.get("height") - 5 * d.get("age") + 5;
-                console.log("male", bmr);
             } else{
                 bmr = 10 * d.get("weight") + 6.25 * d.get("height") - 5 * d.get("age") - 161;
-                console.log("female", bmr);
-               // document.getElementById("totalcalories").innerHTML = bmr;
             } 
-            console.log(bmr);
-            
+            //bmr x activity level index
             if(d.get("activitylevel") == "sedentary"){
                 bmr *= 1.2;
             } else if(d.get("activitylevel") == "somewhat active"){
@@ -55,11 +51,28 @@ function calculateBMR(){
             } else {
                 document.getElementById("totalcalories").innerHTML = "invalid";
             }
-            console.log(bmr);
-            document.getElementById("totalcalories").innerHTML = bmr.toFixed(0);
+            //display total and suggested calorie
+            document.getElementById("totalcalories").innerHTML = bmr.toFixed(0) + " Calories/day";
+            document.getElementById("suggestedcal").innerHTML = (bmr*0.79).toFixed(0) + " Calories/day";
+
         });
     })
 }
+
+//function displayGender() { //event handler only
+    //let s = document.getElementById("select").value;
+    
+    //let s = document.getElementById('choosegender').selectedOptions[0].text;
+    //document.getElementById("demo1").innerHTML = s;
+
+    //let f = document.getElementById("female").value;
+    //document.getElementById("demo2").innerHTML = f;
+    //let s = document.getElementById('choosegender');
+    //let result = s.options[s.selectedIndex].value;
+    //document.getElementById('demo1').innerHTML = result;
+//}
+
+
 /** 
 function actLevel(){
     firebase.auth().onAuthStateChanged(function (user){
@@ -72,7 +85,9 @@ function actLevel(){
 */
 
 //-----Execute functions -------
+
 saveUserData();
+//displayGender();
 
 
 
