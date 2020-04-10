@@ -21,6 +21,7 @@
     <!-- Your own CSS files -->
     <!------------------------>
     <link rel="stylesheet" href="style/account.css">
+    <link rel="stylesheet" href="style/all.css">
 
 </head>
 <body>
@@ -28,9 +29,6 @@
     <!--  HTML Section -->
     <!------------------->
 
-  
-
-   
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         
         <a href="#" class="navbar-brand">Stay-Healthy</a>
@@ -41,9 +39,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="main.html" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">Campus food</a>
+                <a href="food.html" class="nav-item nav-link">Campus food</a>
                 <a href="daycal.html" class="nav-item nav-link">Today's Calorie Intake</a>
-                <a href="#" class="nav-item nav-link">Weight Trend</a>
             </div>
             <div class="navbar-nav ml-auto">
                 <a href="account.html" class="nav-item nav-link">Account</a>
@@ -74,7 +71,7 @@
 </div>
 
 <div class ="footer fixed-bottom center">
-    <input type="button" value="BACK" id="backbutton" >
+    <input type="button" value="BACK" id="backbutton" onclick="window.location='main.html'">
 </div>
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, other API's    -->
@@ -91,7 +88,7 @@
     <!----------------------------------------------->
     <!-- JS files: Your own JavaScripts go here    -->
     <!----------------------------------------------->
-    <script src="firebase_api_team27.js"></script>
+    <script src="./script/firebase_api_team27.js"></script>
 
 </body>
 </html>                            
