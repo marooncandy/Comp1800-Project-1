@@ -54,7 +54,7 @@ function calculateBMR(){
             //display total and suggested calorie
             document.getElementById("totalcalories").innerHTML = bmr.toFixed(0) + " Calories/day";
             document.getElementById("suggestedcal").innerHTML = (bmr*0.79).toFixed(0) + " Calories/day";
-
+            document.getElementById("caltable").style.visibility = "visible";
         });
     })
 }
@@ -85,7 +85,7 @@ function actLevel(){
 */
 
 //-----Execute functions -------
-
+document.getElementById("caltable").style.visibility = "hidden";
 saveUserData();
 //displayGender();
 
